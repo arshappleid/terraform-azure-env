@@ -1,0 +1,11 @@
+services:
+    dev:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                TERRAFORM_VERSION: "1.13.3"
+        container_name: terraform_env
+        volumes:
+            - ./iac/:/iac
+        working_dir: /iac/
