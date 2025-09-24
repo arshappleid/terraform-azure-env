@@ -1,0 +1,10 @@
+{
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				"match": ".*\\.tf$",
+				"cmd": "docker exec terraform_env sh -lc 'tflint --recursive && tfsec .'"
+			}
+		]
+	}
+}

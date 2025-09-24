@@ -1,5 +1,8 @@
 # azure-ad-sql-server
 
+## Requirements
+1. Docker, Docker compose. 
+2. VsCode IDE, (Run on Save Extension)[https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave]
 
 ## Setting up the Environment
 Ensure docker, docker compose , and the docker engine is installed
@@ -16,7 +19,6 @@ docker exec --interactive --tty <container_id> bash
 
 ### Inside the Container
 ```
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 
 terraform init ## install all modules
