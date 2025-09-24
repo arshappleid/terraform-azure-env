@@ -3,6 +3,11 @@ This project is a template to use for terraform Projects, which comes with AWS C
 
 This project ensures that AWS/Azure Credentials for different projects remain contained within the Docker environment. Which mitigates the risk of accidentally deploying into an unknown account. Although requires configuring the account logins through single-sign on on each new project. 
 
+## Benefits
+1. Setup new environments for new project by just cloning the repo.
+2. Easily install AWS/Azure Cli tools. Also comes pre installed with linting and security config checking tools
+3. Easily manage login credentials within directories, rather than having to worry about managing through x
+
 ## Requirements
 1. Docker, Docker compose. 
 2. VsCode IDE, (Run on Save Extension)[https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave]
@@ -10,7 +15,7 @@ This project ensures that AWS/Azure Credentials for different projects remain co
 ## Setting up the Environment
 Ensure docker, docker compose , and the docker engine is installed.
 ```
-brew install -y docker
+brew install -y docker ## MacOS
 ```
 
 ### Spin up the container
@@ -40,3 +45,5 @@ az account list --output table ## use this to get the subscription id
 aws sso login --profile my-profile
 ```
 
+## Running Linting and Security Config Checker
+Both the (Terraform Lint)[https://github.com/terraform-linters/tflint] and (TFSec)[https://aquasecurity.github.io/tfsec/v1.20.0/guides/usage/] are configured to run on file saves, and the output is shown in the Output section of the terminal. 

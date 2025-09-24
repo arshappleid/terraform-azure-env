@@ -1,9 +1,11 @@
 {
 	"emeraldwalk.runonsave": {
+		"autoClearConsole": true,
 		"commands": [
 			{
 				"match": ".*\\.tf$",
-				"cmd": "docker exec terraform_env sh -lc 'tflint --recursive && tfsec .'"
+				"cmd": "docker exec terraform_env sh -lc 'tflint --recursive || true; tfsec --no-colour --format text .'",
+				"autoShowOutputPanel": "always"
 			}
 		]
 	}
