@@ -10,7 +10,7 @@ This project ensures that AWS/Azure Credentials for different projects remain co
 
 ## Requirements
 1. Docker, Docker compose. 
-2. VsCode IDE, (Run on Save Extension)[https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave]
+2. VsCode IDE, [Run on Save Extension](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave)
 
 ## Setting up the Environment
 Ensure docker, docker compose , and the docker engine is installed.
@@ -46,4 +46,4 @@ aws sso login --profile my-profile
 ```
 
 ## Running Linting and Security Config Checker
-Both the (Terraform Lint)[https://github.com/terraform-linters/tflint] and (TFSec)[https://aquasecurity.github.io/tfsec/v1.20.0/guides/usage/] are configured to run on file saves, and the output is shown in the Output section of the terminal. 
+Both the [Terraform Lint](https://github.com/terraform-linters/tflint) and [TFSec](https://aquasecurity.github.io/tfsec/v1.20.0/guides/usage/) are configured to run on file saves, and the output is shown in the Output section of the terminal. 
